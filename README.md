@@ -1,7 +1,7 @@
-🚀 Bobby's Awesome Portfolio
+🚀 Portfolio
 🌟 Project Spotlight
 
-Live URL: bobbyportfolio.vercel.app (Update after deployment)
+Live URL: bobbyportfolio.vercel.app
 
 🎨 Edit Like a Pro
 This portfolio is crafted by Bobby Devarapu. Spice it up your way!
@@ -44,13 +44,3 @@ Fix Assets: Add vercel.json if needed:{
   "builds": [{ "src": "package.json", "use": "@vercel/static" }],
   "routes": [{ "src": "/(.*\\.(jpg|png|gif|ico|pdf))", "dest": "/$1" }]
 }
-
-
-Rerun vercel after saving.
-
-
-
-🌐 Custom Domain
-
-Go to Vercel Dashboard > Settings > Domains > Add Domain.
-Follow the setup guide: Vercel Custom Domains.
