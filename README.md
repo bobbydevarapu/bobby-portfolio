@@ -1,73 +1,191 @@
-# Welcome to your Lovable project
+# Welcome to your Portfolio
 
-## Project info
+Welcome to Bobby's Portfolio
 
-**URL**: https://lovable.dev/projects/7d761051-d103-47fa-b7f6-052bf953abd2
+Project Info
 
-## How can I edit this code?
+URL: bobbyportfolio.vercel.app (Update this URL after deployment)
 
-There are several ways of editing your application.
+How Can I Edit This Code?
 
-**Use Lovable**
+This portfolio was created by Bobby Devarapu. You can edit it in several ways:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7d761051-d103-47fa-b7f6-052bf953abd2) and start prompting.
+Use Your Preferred IDE
 
-Changes made via Lovable will be committed automatically to this repo.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will be reflected in your deployed site.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The only requirement is having Node.js & npm installed - install with nvm.
 
 Follow these steps:
 
-```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/bobbydevarapu/bobby-portfolio.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd bobby-portfolio
 
 # Step 3: Install the necessary dependencies.
 npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Edit a File Directly in GitHub
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+
+Navigate to the desired file(s) in the repository.
+
+
+
+Click the "Edit" button (pencil icon) at the top right of the file view.
+
+
+
+Make your changes and commit the changes.
+
+Use GitHub Codespaces
+
+
+
+
+
+Navigate to the main page of your repository.
+
+
+
+Click on the "Code" button (green button) near the top right.
+
+
+
+Select the "Codespaces" tab.
+
+
+
+Click on "New codespace" to launch a new Codespace environment.
+
+
+
+Edit files directly within the Codespace and commit and push your changes once you're done.
+
+What Technologies Are Used for This Project?
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/7d761051-d103-47fa-b7f6-052bf953abd2) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
+Vite
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+TypeScript
+
+
+
+React
+
+
+
+shadcn-ui
+
+
+
+Tailwind CSS
+
+How Can I Deploy This Project?
+
+To deploy your portfolio to Vercel:
+
+
+
+
+
+Install Vercel CLI:
+
+
+
+
+
+Open your terminal and run:
+
+npm install -g vercel
+
+
+
+Log in to Vercel:
+
+
+
+
+
+Run:
+
+vercel login
+
+
+
+Follow the prompts to log in with your GitHub account.
+
+
+
+Deploy the Project:
+
+
+
+
+
+From your project directory (C:\Users\BOBBY\OneDrive\CODE-FILES\bobby-portfolio), run:
+
+vercel
+
+
+
+Vercel will detect your project and ask:
+
+
+
+
+
+Set up and deploy this directory? Answer Yes.
+
+
+
+Link to an existing project? Select your GitHub repository (bobbydevarapu/bobby-portfolio) or create a new project.
+
+
+
+Install dependencies? Answer Yes to let Vercel run npm install.
+
+
+
+After the build succeeds, Vercel will provide a deployment URL (e.g., https://bobbyportfolio.vercel.app).
+
+
+
+Optional Configuration:
+
+
+
+
+
+If images or assets don’t load, add a vercel.json file in the root directory with:
+
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*\\.(jpg|png|gif|ico|pdf))", "dest": "/$1" }
+  ]
+}
+
+
+
+Save it, then rerun vercel.re here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
