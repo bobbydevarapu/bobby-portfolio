@@ -5,25 +5,70 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
+// Define form data type for TypeScript
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: ""
   });
   const { toast } = useToast();
+  const [result, setResult] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
+  // Web3Forms access key
+  const accessKey = "14264ff2-4c74-4a34-a270-806b023fa972";
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setResult("Sending...");
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("access_key", accessKey);
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message Sent Successfully!");
+        toast({
+          title: "Success!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+      } else {
+        setResult(`Error: ${data.message}`);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      setResult("An error occurred. Please try again later.");
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -163,6 +208,7 @@ const ContactSection = () => {
               <Button type="submit" variant="hero" size="lg" className="w-full">
                 Send Message
               </Button>
+              {result && <p className="text-center text-sm mt-2">{result}</p>}
             </form>
           </div>
         </div>
