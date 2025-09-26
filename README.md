@@ -37,10 +37,3 @@ Login: vercel login
 Deploy: vercel (from C:\Users\BOBBY\OneDrive\CODE-FILES\bobby-portfolio)
 Say "Yes" to setup, link to bobbydevarapu/bobby-portfolio, and install deps.
 Grab your URL (e.g., https://bobbyportfolio.vercel.app).
-
-
-Fix Assets: Add vercel.json if needed:{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "builds": [{ "src": "package.json", "use": "@vercel/static" }],
-  "routes": [{ "src": "/(.*\\.(jpg|png|gif|ico|pdf))", "dest": "/$1" }]
-}
