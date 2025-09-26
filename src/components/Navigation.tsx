@@ -23,7 +23,7 @@ const Navigation = () => {
   };
 
   const handleConnectClick = () => {
-    window.location.href = "mailto:bobby4976@gmail.com";
+    window.location.href = "mailto:bobbyd976@gmail.com";
   };
 
   return (
