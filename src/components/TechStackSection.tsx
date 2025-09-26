@@ -6,14 +6,12 @@ const TechStackSection = () => {
     { name: "Python", color: "from-yellow-400 to-yellow-600", bgColor: "bg-slate-800", icon: "/images/python-icon.png" },
     { name: "ReactJS", color: "from-cyan-400 to-cyan-600", bgColor: "bg-slate-800", icon: "/images/react-icon.png" },
     { name: "NodeJS", color: "from-green-400 to-green-600", bgColor: "bg-slate-800", icon: "/images/node-icon.png" },
-    { name: "Express.JS", color: "from-purple-400 to-purple-600", bgColor: "bg-slate-800", icon: "/images/express-icon.png" },
     { name: "MongoDB", color: "from-green-500 to-green-700", bgColor: "bg-slate-800", icon: "/images/mongo-icon.png" },
     { name: "HTML5", color: "from-orange-400 to-orange-600", bgColor: "bg-slate-800", icon: "/images/html-icon.png" },
     { name: "CSS3", color: "from-blue-400 to-blue-600", bgColor: "bg-slate-800", icon: "/images/css-icon.png" },
     { name: "Git", color: "from-orange-400 to-orange-600", bgColor: "bg-slate-800", icon: "/images/git-icon.png" },
     { name: "GitHub", color: "from-gray-400 to-gray-600", bgColor: "bg-slate-800", icon: "/images/github-icon.png" },
     { name: "JavaScript", color: "from-yellow-400 to-yellow-600", bgColor: "bg-slate-800", icon: "/images/js-icon.png" },
-    { name: "BootStrap", color: "from-purple-400 to-purple-600", bgColor: "bg-slate-800", icon: "/images/bootstrap-icon.png" },
     { name: "Rest API", color: "from-indigo-400 to-indigo-600", bgColor: "bg-slate-800", icon: "/images/api-icon.png" }
   ];
 

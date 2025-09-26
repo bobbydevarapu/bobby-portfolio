@@ -4,36 +4,36 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Employee Management System",
-      description: "Engineered a robust system to streamline employee record management, handling 1,000+ records with 99% accuracy.",
-      technologies: ["C++", "File Handling", "OOP"],
-      demoLink: "https://www.linkedin.com/posts/bobby-devarapu-43874a2ab_cplusplus-employeemanagementsystem-problemsolving-activity-7308384748286926848-39Tf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEquzewB0i0Ku0eWriHw-vF6qpxVo9qVYTY",
-      githubLink: "https://github.com/bobbydevarapu/Cpp-Projects/tree/main/Employee%20Mangement",
-      image: "/image/emp.jpg"
+      title: "GuardianFlow (Threat Detection System)",
+      description: "Automated ML pipeline on AWS for real-time threat detection — Oct 2025.",
+      technologies: ["AWS", "Python", "XGBoost"],
+      demoLink: "#",
+      githubLink: "#",
+      image: "/image/guardianflow.jpg"
+    },
+    {
+      title: "SimplifAI",
+      description: "AI-powered document analysis platform with serverless backend — Dec 2025.",
+      technologies: ["React", "TypeScript", "AWS"],
+      demoLink: "#",
+      githubLink: "#",
+      image: "/image/simplifai.jpg"
+    },
+    {
+      title: "LinkSync",
+      description: "URL shortening and link management tool — Dec 2024.",
+      technologies: ["HTML", "CSS", "Node.js"],
+      demoLink: "#",
+      githubLink: "#",
+      image: "/image/linksync.jpg"
     },
     {
       title: "Box-Dome",
-      description: "A movie management application with user authentication and watchlist features, blending vibrant visuals with smooth functionality.",
-      technologies: ["React", "JavaScript", "Tailwind CSS"],
+      description: "Movie management app with auth and watchlist.",
+      technologies: ["React", "JavaScript", "Tailwind"],
       demoLink: "https://boxdome-app.onrender.com/",
       githubLink: "https://github.com/bobbydevarapu/boxdome-app",
       image: "/image/boxdome.jpg"
-    },
-    {
-      title: "ProctorX - Online Proctoring Platform - COMING SOON",
-      description: "Created a secure platform for remote assessments, supporting student, teacher needs with AI monitoring.",
-      technologies: ["React", "AWS", "TypeScript"],
-      demoLink: "#",
-      githubLink: "#",
-      image: "/image/proctoring.jpg"
-    },
-    {
-      title: "Number System Converter - COMING SOON",
-      description: "Developed a responsive web application to convert between binary, decimal, and hexadecimal systems using React.",
-      technologies: ["React", "JavaScript", "Tailwind CSS"],
-      demoLink: "#",
-      githubLink: "#",
-      image: "/image/number.jpg"
     }
   ];
 

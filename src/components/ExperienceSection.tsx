@@ -1,17 +1,17 @@
 const ExperienceSection = () => {
   const experiences = [
     {
-      period: "May 2024 - Jul 2024",
+      period: "May 2025 – July 2025",
       title: "AWS Development Intern",
-      company: "Technical Hub Pvt. Ltd",
-      description: "Implemented <strong style=\"color: #ff6200;\">AWS</strong> services (EC2, S3, RDS) to establish a <strong style=\"color: #ff6200;\">scalable</strong> cloud architecture, supporting 5+ diverse applications. Streamlined solutions using automation, reducing client project delivery time by 30%. Built secure applications adhering to AWS best practices, ensuring robust data protection for 3 cloud environments. Collaborated with a team of 3 developers to implement scalable solutions, improving project delivery efficiency by 15%.",
+      company: "Technical Hub Pvt. Ltd – AWS Developer",
+      description: `Surampalem, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Orchestrated and managed AWS services to construct a resilient cloud structure, supporting over 5 distinct applications.</li><li>Created unit tests covering 25% of cloud configurations using automation tools to ensure system stability, reliability, and compliance with <strong style="color: #ff6200;"> AWS standards</strong>, while optimizing processes to boost operational performance.</li><li>Achieved a 30% reduction in deployment times by refining cloud resource allocation with AWS best practices.</li></ul>`,
       link: "https://www.linkedin.com/posts/bobby-devarapu-43874a2ab_internship-offer-letter-activity-7329880043856273408-qSJC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEquzewB0i0Ku0eWriHw-vF6qpxVo9qVYTY"
     },
     {
-      period: "May 2025 - Jul 2025",
-      title: "Short-Term Internship Program",
-      company: "APSCHE 2025 - SmartBridge",
-      description: "Completed a virtual internship focused on <strong style=\"color: #ff6200;\">Generative AI</strong> with IBM Cloud, developed the ProctoX - Online AI Proctoring Platform achieving 95% accuracy, and enhanced technical expertise through teamwork. Utilized cutting-edge AI tools to optimize performance.",
+      period: "June 2025 – July 2025",
+      title: "Generative AI with IBM Cloud",
+      company: "SmartBridge Educational Services Pvt. Ltd – Gen AI Intern",
+      description: `Remote, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Excelled in the Short-Term Virtual Internship Program focused on <strong style="color: #ff6200;">Generative AI</strong> with IBM Cloud, successfully completing 100% of assigned milestones ahead of schedule and earning top recognition among peers.</li><li>Spearheaded program success with unwavering dedication, achieving a 98% team performance rating, delivering a 90% accuracy rate in AI model outputs, and demonstrating exceptional teamwork and leadership.</li></ul>`,
       link: "#"
     }
   ];
