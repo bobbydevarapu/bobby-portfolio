@@ -1,21 +1,14 @@
-import { useState, useEffect } from "react";
-import LoadingScreen from "@/components/LoadingScreen";
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import TechStackSection from "@/components/TechStackSection";
-import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import Navigation from "@/components/Navigation";
+import ProjectsSection from "@/components/ProjectsSection";
+import TechStackSection from "@/components/TechStackSection";
+import { useEffect } from "react";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleLoadingComplete = () => {
-    setIsLoading(false);
-  };
-
   // Smooth scroll functionality for navigation
   useEffect(() => {
     const observerOptions = {
@@ -37,11 +30,7 @@ const Index = () => {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, [isLoading]);
-
-  if (isLoading) {
-    return <LoadingScreen onComplete={handleLoadingComplete} />;
-  }
+  }, []);
 
   return (
     <div className="min-h-screen">
