@@ -52,8 +52,9 @@ const HeroSection = () => {
 
   const handleResumeClick = () => {
     const link = document.createElement("a");
-  link.href = "/Bobby Resume.pdf"; // Simulated resume file
-  link.download = "Bobby Resume.pdf";
+    // Use the updated resume file present in public/
+    link.href = "/22p31a05f4.pdf";
+    link.download = "22p31a05f4.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
