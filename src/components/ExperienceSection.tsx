@@ -4,14 +4,14 @@ const ExperienceSection = () => {
       period: "May 2025 – July 2025",
       title: "AWS Development Intern",
       company: "Technical Hub Pvt. Ltd – AWS Developer",
-      description: `Surampalem, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Orchestrated and managed AWS services to construct a resilient cloud structure, supporting over 5 distinct applications.</li><li>Created unit tests covering 25% of cloud configurations using automation tools to ensure system stability, reliability, and compliance with <strong style="color: #ff6200;"> AWS standards</strong>, while optimizing processes to boost operational performance.</li><li>Achieved a 30% reduction in deployment times by refining cloud resource allocation with AWS best practices.</li></ul>`,
+      description: `Surampalem, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Deployed and monitored AWS infrastructure (EC2, S3, IAM, CloudWatch) for 5+ applications in test environments.</li><li>Created Python/Bash automation scripts that streamlined cloud configuration tasks by 25%.</li><li>Monitored system metrics and streamlined performance checks, enhancing stability while lowering repetitive interventions by 15%.</li><li>Connected backend services to cloud resources via REST APIs and tracked application-level behavior.</li></ul>`,
       link: "https://www.linkedin.com/posts/bobby-devarapu-43874a2ab_internship-offer-letter-activity-7329880043856273408-qSJC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEquzewB0i0Ku0eWriHw-vF6qpxVo9qVYTY"
     },
     {
       period: "June 2025 – July 2025",
       title: "Generative AI with IBM Cloud",
       company: "SmartBridge Educational Services Pvt. Ltd – Gen AI Intern",
-      description: `Remote, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Excelled in the Short-Term Virtual Internship Program focused on <strong style="color: #ff6200;">Generative AI</strong> with IBM Cloud, successfully completing 100% of assigned milestones ahead of schedule and earning top recognition among peers.</li><li>Spearheaded program success with unwavering dedication, achieving a 98% team performance rating, delivering a 90% accuracy rate in AI model outputs, and demonstrating exceptional teamwork and leadership.</li></ul>`,
+      description: `Remote, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Completed a Generative AI internship on IBM Cloud, delivering 100% of milestones on schedule.</li><li>Processed and evaluated 12+ datasets to support preprocessing and improve baseline model testing accuracy by 18%.</li><li>Constructed optimized data-preprocessing pipelines using Python, boosting stability and minimizing manual effort.</li></ul>`,
       link: "#"
     }
   ];
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
               <p className="text-muted-foreground">Years of experience</p>
             </div>
             <div className="glass-effect p-6 rounded-xl text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-4xl font-bold text-primary mb-2">10+</div>
+              <div className="text-4xl font-bold text-primary mb-2">6+</div>
               <p className="text-muted-foreground">Projects Done</p>
             </div>
             <div className="glass-effect p-6 rounded-xl text-center hover:bg-white/10 transition-all duration-300">

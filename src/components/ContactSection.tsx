@@ -90,7 +90,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">bobbyd976@gmail.com</p>
+                  <p className="text-foreground font-medium">bobbyd9676@gmail.com</p>
                 </div>
               </div>
               
@@ -119,7 +119,7 @@ const ContactSection = () => {
               <h4 className="text-lg font-semibold text-foreground mb-4">Coding Profiles</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://auth.geeksforgeeks.org/user/bobbydevarapu/profile" 
+                  href="https://www.geeksforgeeks.org/user/bobbydz1hq/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center hover:bg-primary/20 transition-all duration-300"

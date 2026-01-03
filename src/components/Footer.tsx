@@ -10,7 +10,7 @@ const Footer = () => {
 
         <div className="flex justify-center space-x-6 mb-4">
           <a 
-            href="https://www.linkedin.com/in/bobby-devarapu-43874a2ab/" 
+            href="https://www.linkedin.com/in/bobbydevarapu/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group"

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Instagram, Linkedin } from "lucide-react";
+import { Download, Github, Instagram, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -53,8 +53,8 @@ const HeroSection = () => {
   const handleResumeClick = () => {
     const link = document.createElement("a");
     // Use the updated resume file present in public/
-    link.href = "/22p31a05f4.pdf";
-    link.download = "22p31a05f4.pdf";
+    link.href = "/Bobby_Devarapu.pdf";
+    link.download = "Bobby_Devarapu.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -95,15 +95,16 @@ const HeroSection = () => {
               onClick={() => scrollToSection("contact")}
               className="group"
             >
-              Got a project?
-              <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              Connect
             </Button>
             <Button
               variant="glass"
               size="lg"
               onClick={handleResumeClick}
+              className="flex items-center"
             >
-              My Resume
+              Resume
+              <Download className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
@@ -117,7 +118,7 @@ const HeroSection = () => {
               <Github className="h-5 w-5 text-foreground group-hover:text-primary" />
             </a>
             <a
-              href="https://www.linkedin.com/in/bobby-devarapu-43874a2ab/"
+              href="https://www.linkedin.com/in/bobbydevarapu/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group"

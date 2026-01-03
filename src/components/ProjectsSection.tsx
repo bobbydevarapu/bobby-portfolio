@@ -4,29 +4,30 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "GuardianFlow (Threat Detection System)",
-      description: "Automated ML pipeline on AWS for real-time threat detection — Oct 2025.",
-      technologies: ["AWS", "Python", "XGBoost"],
-      demoLink: "#",
-      githubLink: "#",
-      image: "/image/guardianflow.jpg"
+      title: "Real-Time Stock Market Analytics Pipeline",
+      description: "Architected a serverless real-time data pipeline using Kinesis, Lambda, and DynamoDB to ingest and process events.",
+      technologies: ["AWS", "Python", "Kinesis"],
+      demoLink: "https://github.com/bobbydevarapu/real-time-stock-analytics-aws",
+      githubLink: "https://github.com/bobbydevarapu/real-time-stock-analytics-aws",
+      image: "/image/stock-analytics.jpg"
     },
     {
-      title: "SimplifAI",
-      description: "AI-powered document analysis platform with serverless backend — Dec 2025.",
-      technologies: ["React", "TypeScript", "AWS"],
-      demoLink: "#",
-      githubLink: "#",
-      image: "/image/simplifai.jpg"
+      title: "Automated Receipt Processing System",
+      description: "Designed a Textract-based OCR workflow with automated ingestion and structured DynamoDB storage.",
+      technologies: ["AWS S3", "Textract", "Lambda"],
+      demoLink: "https://github.com/bobbydevarapu/automated_receipt_processing",
+      githubLink: "https://github.com/bobbydevarapu/automated_receipt_processing",
+      image: "/image/automated-receipt.png"
     },
     {
-      title: "LinkSync",
-      description: "URL shortening and link management tool — Dec 2024.",
-      technologies: ["HTML", "CSS", "Node.js"],
+      title: "Intelligent Incident Recovery System",
+      description: "Engineered an automated log-classification pipeline processing 2,000+ events/day and automated incident triage workflows.",
+      technologies: ["Python", "AWS Lambda", "DynamoDB"],
       demoLink: "#",
       githubLink: "#",
-      image: "/image/linksync.jpg"
-    },
+      image: "/image/Intelligent-Incident.jpg"
+    }
+    ,
     {
       title: "Box-Dome",
       description: "Movie management app with auth and watchlist.",
