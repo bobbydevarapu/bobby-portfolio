@@ -14,7 +14,7 @@ const EducationSection = () => {
                 <h3 className="text-2xl font-semibold text-foreground">B.Tech in Computer Science and Engineering</h3>
                 <p className="text-primary font-medium mt-1">Aditya College of Engineering and Technology</p>
                 <p className="text-muted-foreground mt-2">Kakinada, Andhra Pradesh</p>
-                <p className="text-muted-foreground mt-1">CGPA: 8.33 / 10</p>
+                <p className="text-muted-foreground mt-1">CGPA: 8.0 / 10</p>
               </div>
               <div className="mt-4 md:mt-0 text-sm text-muted-foreground">2022 - 2026</div>
             </div>
