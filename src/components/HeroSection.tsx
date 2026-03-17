@@ -53,8 +53,8 @@ const HeroSection = () => {
   const handleResumeClick = () => {
     const link = document.createElement("a");
     // Use the updated resume file present in public/
-    link.href = "/Bobby Devarapu_F4.pdf";
-    link.download = "Bobby Devarapu_F4.pdf";
+    link.href = "/Bobby_Devarapu resume.pdf";
+    link.download = "Bobby_Devarapu resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -114,6 +114,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 glass-effect rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group"
+              title="Download Resume"
             >
               <Github className="h-5 w-5 text-foreground group-hover:text-primary" />
             </a>
