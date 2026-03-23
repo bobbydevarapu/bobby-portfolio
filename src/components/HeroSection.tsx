@@ -52,9 +52,9 @@ const HeroSection = () => {
 
   const handleResumeClick = () => {
     const link = document.createElement("a");
-    // Use the updated resume file present in public/
-    link.href = "/Bobby_Devarapu resume.pdf";
-    link.download = "Bobby_Devarapu resume.pdf";
+    // Use the new resume file present in public/
+    link.href = "/Bobby_SDE.pdf";
+    link.download = "Bobby_SDE.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
