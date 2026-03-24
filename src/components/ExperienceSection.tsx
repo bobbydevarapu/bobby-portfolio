@@ -1,7 +1,7 @@
 const ExperienceSection = () => {
   const experiences = [
     {
-      period: "May 2025 – July 2025",
+      period: "June 2024 – June 2025",
       title: "AWS Development Intern",
       company: "Technical Hub Pvt. Ltd – AWS Developer",
       description: `Surampalem, Andhra Pradesh<br/><ul class="list-disc pl-5 mt-2"><li>Deployed and monitored AWS infrastructure (EC2, S3, IAM, CloudWatch) for 5+ applications in test environments.</li><li>Created Python/Bash automation scripts that streamlined cloud configuration tasks by 25%.</li><li>Monitored system metrics and streamlined performance checks, enhancing stability while lowering repetitive interventions by 15%.</li><li>Connected backend services to cloud resources via REST APIs and tracked application-level behavior.</li></ul>`,
