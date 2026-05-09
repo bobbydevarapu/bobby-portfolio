@@ -1,215 +1,293 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
-
-// Define form data type for TypeScript
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUpRight,
+} from "lucide-react";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: ""
-  });
-  const { toast } = useToast();
-  const [result, setResult] = useState<string>("");
-
-  // Web3Forms access key
-  const accessKey = "14264ff2-4c74-4a34-a270-806b023fa972";
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setResult("Sending...");
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("access_key", accessKey);
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("message", formData.message);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formDataToSend
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setResult("Message Sent Successfully!");
-        toast({
-          title: "Success!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        setFormData({ name: "", email: "", message: "" }); // Reset form
-      } else {
-        setResult(`Error: ${data.message}`);
-        toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      setResult("An error occurred. Please try again later.");
-      toast({
-        title: "Error",
-        description: "An unexpected error occurred.",
-        variant: "destructive",
-      });
-    }
-  };
-
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+    <section
+      id="contact"
+      className="
+        section-divider
+        relative
+        py-16 md:py-24
+        overflow-hidden
+      "
+    >
+      {/* GRID */}
+      <div className="absolute inset-0 grid-bg opacity-[0.03]" />
+
+      {/* SUBTLE GLOW */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-1/2
+
+          -translate-x-1/2
+
+          w-[320px]
+          h-[320px]
+
+          bg-primary/10
+
+          blur-[120px]
+
+          rounded-full
+          opacity-60
+
+          pointer-events-none
+        "
+      />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        {/* HEADER */}
+        <div className="text-center">
+
+          <p
+            className="
+              text-primary
+              uppercase
+              tracking-[0.28em]
+              text-[11px]
+              mb-4
+            "
+          >
             Contact
+          </p>
+
+          <h2
+            className="
+              text-[34px]
+              sm:text-[46px]
+              md:text-[54px]
+
+              font-black
+              tracking-[-0.04em]
+
+              text-white
+            "
+          >
+            Let’s Build Something
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+
+          <p
+            className="
+              mt-5
+
+              text-zinc-400
+
+              text-[15px]
+              sm:text-[16px]
+
+              leading-relaxed
+
+              max-w-2xl
+              mx-auto
+            "
+          >
+            Open to internships, backend engineering roles,
+            cloud projects, and collaborative opportunities.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">bobbyd9676@gmail.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-foreground font-medium">+91 9063112566</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-foreground font-medium">Andhra Pradesh, India</p>
-                </div>
-              </div>
+        {/* MAIN CARD */}
+        <div
+          className="
+            mt-12
+
+            glass-effect
+
+            rounded-2xl
+
+            border border-white/5
+
+            p-6 sm:p-8 md:p-10
+          "
+        >
+
+          {/* EMAIL */}
+          <div className="flex flex-col items-center text-center">
+
+            <div
+              className="
+                w-16
+                h-16
+
+                rounded-2xl
+
+                bg-primary/10
+
+                border border-primary/20
+
+                flex items-center justify-center
+              "
+            >
+              <Mail className="w-7 h-7 text-primary" />
             </div>
 
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-foreground mb-4">Coding Profiles</h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://www.geeksforgeeks.org/user/bobbydz1hq/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
-                >
-                  <img src="/image/gfg.png" alt="GFG" className="h-8 w-8" style={{ filter: "brightness(0) invert(1)" }} />
-                </a>
-                <a 
-                  href="https://leetcode.com/u/BobbyDevarapu/"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
-                >
-                  <img src="/image/leetcode.png" alt="LeetCode" className="h-8 w-8" style={{ filter: "brightness(0) invert(1)" }} />
-                </a>
-                <a 
-                  href="https://www.codechef.com/users/bbydevarapu" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
-                >
-                  <img src="/image/codechef.png" alt="CodeChef" className="h-8 w-8" style={{ filter: "brightness(0) invert(1)" }} />
-                </a>
-                <a 
-                  href="https://takeuforward.org/plus/profile/Devera" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 glass-effect rounded-lg flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
-                >
-                  <img src="/image/tuf.png" alt="Take U Forward" className="h-8 w-8" style={{ filter: "brightness(0) invert(1)" }} />
-                </a>
-              </div>
-            </div>
+            <h3
+              className="
+                mt-6
+
+                text-2xl
+                font-bold
+
+                text-white
+              "
+            >
+              Get In Touch
+            </h3>
+
+            <a
+              href="mailto:bobbyd9676@gmail.com"
+              className="
+                mt-4
+
+                text-zinc-400
+
+                hover:text-primary
+
+                transition-colors duration-300
+              "
+            >
+              bobbyd9676@gmail.com
+            </a>
+
+            {/* BUTTON */}
+            <Button
+              className="
+                mt-8
+
+                btn-primary
+              "
+              onClick={() =>
+                window.open(
+                  "mailto:bobbyd9676@gmail.com",
+                  "_blank"
+                )
+              }
+            >
+              Send Message
+
+              <ArrowUpRight
+                className="ml-2"
+                size={18}
+              />
+            </Button>
           </div>
 
-          <div className="glass-effect p-8 rounded-xl">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Send Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Your Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  placeholder="Enter your name"
-                  required
-                  className="bg-background/50 border-white/20 focus:border-primary"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Your Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="Enter your email"
-                  required
-                  className="bg-background/50 border-white/20 focus:border-primary"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Your Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  required
-                  className="bg-background/50 border-white/20 focus:border-primary resize-none"
-                />
-              </div>
-              
-              <Button type="submit" variant="hero" size="lg" className="w-full">
-                Send Message
-              </Button>
-              {result && <p className="text-center text-sm mt-2">{result}</p>}
-            </form>
+          {/* SOCIAL + CODING LINKS */}
+          <div
+            className="
+              mt-10
+              pt-8
+
+              border-t border-white/5
+
+              flex
+              flex-wrap
+              items-center
+              justify-center
+
+              gap-4
+            "
+          >
+
+            {/* GITHUB */}
+            <a
+              href="https://github.com/bobbydevarapu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <Github size={20} />
+            </a>
+
+            {/* LINKEDIN */}
+            <a
+              href="https://linkedin.com/in/bobbydevarapu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <Linkedin size={20} />
+            </a>
+
+            {/* LEETCODE */}
+            <a
+              href="https://leetcode.com/u/BobbyDevarapu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <img
+                src="/image/leetcode.png"
+                alt="LeetCode"
+                className="w-5 h-5 object-contain"
+              />
+            </a>
+
+            {/* CODECHEF */}
+            <a
+              href="https://www.codechef.com/users/bbydevarapu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <img
+                src="/image/codechef.png"
+                alt="CodeChef"
+                className="w-5 h-5 object-contain"
+              />
+            </a>
+
+            {/* GFG */}
+            <a
+              href="https://www.geeksforgeeks.org/user/bobbydz1hq/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <img
+                src="/image/gfg.png"
+                alt="GFG"
+                className="w-5 h-5 object-contain"
+              />
+            </a>
+
+            {/* HACKERRANK */}
+            <a
+              href="https://www.hackerrank.com/profile/bobbyd9676"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <img
+                src="/image/hackerrank.png"
+                alt="HackerRank"
+                className="w-5 h-5 object-contain"
+              />
+            </a>
+
+            {/* TUF */}
+            <a
+              href="https://takeuforward.org/profile/Devera"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-card"
+            >
+              <img
+                src="/image/tuf.png"
+                alt="TUF"
+                className="w-5 h-5 object-contain"
+              />
+            </a>
+
           </div>
         </div>
       </div>
