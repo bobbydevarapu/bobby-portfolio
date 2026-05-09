@@ -87,20 +87,41 @@ const HeroSection = () => {
     }
   };
 
-  const handleResumeClick = () => {
-    const link =
-      document.createElement("a");
+  const handleResumeClick = async () => {
+    // Try known resume filenames in public/ and download the first one that exists
+    const candidates = [
+      "/Bobby_Devarapu.pdf",
+      "/Bobby_SDE.pdf",
+      "/Bobby.pdf",
+    ];
 
-    link.href =
-      "/Bobby_Devarapu.pdf";
+    let found: string | null = null;
 
-    link.download =
-      "Bobby_Devarapu.pdf";
+    for (const path of candidates) {
+      try {
+        const res = await fetch(path, { method: "HEAD" });
+        if (res.ok) {
+          found = path;
+          break;
+        }
+      } catch (e) {
+        // ignore network errors and try next
+      }
+    }
+
+    if (!found) {
+      // If the resume file isn't present in public/, notify the user
+      alert("Resume file not found in public/. Please place your PDF in the project's public folder and retry.");
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = found;
+    // Use the filename portion for download attribute
+    link.download = found.split("/").pop() || "resume.pdf";
 
     document.body.appendChild(link);
-
     link.click();
-
     document.body.removeChild(link);
   };
 
