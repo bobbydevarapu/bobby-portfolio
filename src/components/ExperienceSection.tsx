@@ -86,7 +86,7 @@ const ExperienceSection = () => {
               text-white
             "
           >
-            Internship Experience
+            Internship
           </h2>
         </div>
 

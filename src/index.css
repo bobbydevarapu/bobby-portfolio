@@ -198,7 +198,7 @@
 
     line-height: 1.05;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.045em;
 
     font-weight: 600;
   }
@@ -223,11 +223,14 @@
   span,
   a,
   li,
-  button,
   input,
   textarea,
   select {
     font-family: "Inter", sans-serif;
+  }
+
+  button {
+    font-family: "ClashDisplay", sans-serif;
   }
 
   img,

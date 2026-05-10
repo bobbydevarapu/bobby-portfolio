@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { publicUrl } from "@/lib/utils";
 
 import {
   ArrowRight,
@@ -9,7 +10,6 @@ import {
 } from "lucide-react";
 
 import { useEffect, useState } from "react";
-
 const HeroSection = () => {
   const [typedText, setTypedText] =
     useState("");
@@ -21,7 +21,6 @@ const HeroSection = () => {
     useState(0);
 
   const roles = [
-    "AWS Developer",
     "Backend Engineer",
     "Web Developer",
     "Cloud Engineer",
@@ -157,7 +156,7 @@ const HeroSection = () => {
 
           px-5 sm:px-6 lg:px-8
 
-          pt-28 sm:pt-32
+          pt-36 sm:pt-32 lg:pt-28
           pb-16
 
           w-full
@@ -226,7 +225,7 @@ const HeroSection = () => {
               "
             >
               <img
-                src="/image/profile.jpg"
+                src={publicUrl("image/profile.jpg")}
                 alt="Bobby"
                 className="
                   w-[220px]
@@ -386,14 +385,17 @@ const HeroSection = () => {
 >
   {[
     {
+      label: "GitHub",
       icon: Github,
       link: "https://github.com/bobbydevarapu",
     },
     {
+      label: "LinkedIn",
       icon: Linkedin,
       link: "https://www.linkedin.com/in/bobbydevarapu/",
     },
     {
+      label: "Instagram",
       icon: Instagram,
       link: "https://www.instagram.com/bobby_devarapu/",
     },
@@ -401,6 +403,8 @@ const HeroSection = () => {
     <a
       key={index}
       href={social.link}
+      aria-label={social.label}
+      title={social.label}
       target="_blank"
       rel="noopener noreferrer"
       className="

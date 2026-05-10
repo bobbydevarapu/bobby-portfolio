@@ -1,18 +1,20 @@
+import { publicUrl } from "@/lib/utils";
+
 const TechStackSection = () => {
   const technologies = [
-    { name: "C", icon: "/images/c-icon.png" },
-    { name: "C++", icon: "/images/cpp-icon.png" },
-    { name: "Java", icon: "/images/java-icon.png" },
-    { name: "Python", icon: "/images/python-icon.png" },
-    { name: "ReactJS", icon: "/images/react-icon.png" },
-    { name: "NodeJS", icon: "/images/node-icon.png" },
-    { name: "MongoDB", icon: "/images/mongo-icon.png" },
-    { name: "HTML5", icon: "/images/html-icon.png" },
-    { name: "CSS3", icon: "/images/css-icon.png" },
-    { name: "Git", icon: "/images/git-icon.png" },
-    { name: "GitHub", icon: "/images/github-icon.png" },
-    { name: "JavaScript", icon: "/images/js-icon.png" },
-    { name: "REST API", icon: "/images/api-icon.png" },
+    { name: "C", icon: publicUrl("images/c-icon.png") },
+    { name: "C++", icon: publicUrl("images/cpp-icon.png") },
+    { name: "Java", icon: publicUrl("images/java-icon.png") },
+    { name: "Python", icon: publicUrl("images/python-icon.png") },
+    { name: "ReactJS", icon: publicUrl("images/react-icon.png") },
+    { name: "NodeJS", icon: publicUrl("images/node-icon.png") },
+    { name: "MongoDB", icon: publicUrl("images/mongo-icon.png") },
+    { name: "HTML5", icon: publicUrl("images/html-icon.png") },
+    { name: "CSS3", icon: publicUrl("images/css-icon.png") },
+    { name: "Git", icon: publicUrl("images/git-icon.png") },
+    { name: "GitHub", icon: publicUrl("images/github-icon.png") },
+    { name: "JavaScript", icon: publicUrl("images/js-icon.png") },
+    { name: "REST API", icon: publicUrl("images/api-icon.png") },
   ];
 
   return (

@@ -40,7 +40,7 @@ const Footer = () => {
             sm:text-left
           "
         >
-          © 2026 Bobby Devarapu. All rights reserved.
+          © 2026 Bobby Devarapu.
         </p>
 
         {/* RIGHT */}
@@ -54,7 +54,7 @@ const Footer = () => {
             sm:text-right
           "
         >
-          Built with React, TypeScript & Tailwind CSS
+          Built ❤️ with React
         </p>
 
       </div>

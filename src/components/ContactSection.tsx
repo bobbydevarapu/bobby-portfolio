@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { publicUrl } from "@/lib/utils";
 import {
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUpRight,
+    ArrowUpRight,
+    Github,
+    Linkedin,
+    Mail,
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -226,7 +227,7 @@ const ContactSection = () => {
               className="social-card"
             >
               <img
-                src="/image/leetcode.png"
+                src={publicUrl("image/leetcode.png")}
                 alt="LeetCode"
                 className="w-5 h-5 object-contain"
               />
@@ -240,7 +241,7 @@ const ContactSection = () => {
               className="social-card"
             >
               <img
-                src="/image/codechef.png"
+                src={publicUrl("image/codechef.png")}
                 alt="CodeChef"
                 className="w-5 h-5 object-contain"
               />
@@ -254,7 +255,7 @@ const ContactSection = () => {
               className="social-card"
             >
               <img
-                src="/image/gfg.png"
+                src={publicUrl("image/gfg.png")}
                 alt="GFG"
                 className="w-5 h-5 object-contain"
               />
@@ -268,7 +269,7 @@ const ContactSection = () => {
               className="social-card"
             >
               <img
-                src="/image/hackerrank.png"
+                src={publicUrl("image/hackerrank.png")}
                 alt="HackerRank"
                 className="w-5 h-5 object-contain"
               />
@@ -282,7 +283,7 @@ const ContactSection = () => {
               className="social-card"
             >
               <img
-                src="/image/tuf.png"
+                src={publicUrl("image/tuf.png")}
                 alt="TUF"
                 className="w-5 h-5 object-contain"
               />

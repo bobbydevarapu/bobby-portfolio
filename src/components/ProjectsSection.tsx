@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { publicUrl } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
 
 const ProjectsSection = () => {
@@ -31,7 +32,7 @@ const ProjectsSection = () => {
       demoLink:
         "https://aia-101.up.railway.app/",
 
-      image: "/image/aia.png",
+      image: publicUrl("image/aia.png"),
     },
 
     {
@@ -58,7 +59,7 @@ const ProjectsSection = () => {
 
       demoLink: "#",
 
-      image: "/image/multimodal-ai.png",
+      image: publicUrl("image/multimodal-ai.png"),
     },
 
     // ======================================================
@@ -89,7 +90,7 @@ const ProjectsSection = () => {
 
       demoLink: "#",
 
-      image: "/image/automated-receipt.png",
+      image: publicUrl("image/automated-receipt.png"),
     },
 
     {
@@ -116,7 +117,7 @@ const ProjectsSection = () => {
       demoLink:
         "https://boxdome-app.onrender.com",
 
-      image: "/image/boxdome.png",
+      image: publicUrl("image/boxdome.png"),
     },
 
     // ======================================================
@@ -146,7 +147,7 @@ const ProjectsSection = () => {
 
       demoLink: "#",
 
-      image: "/image/feature-engine.png",
+      image: publicUrl("image/feature-engine.png"),
     },
 
     {
@@ -174,7 +175,7 @@ const ProjectsSection = () => {
       demoLink:
         "https://github.com/bobbydevarapu/real-time-stock-analytics-aws",
 
-      image: "/image/stock-analytics.png",
+      image: publicUrl("image/stock-analytics.png"),
     },
   ];
 
