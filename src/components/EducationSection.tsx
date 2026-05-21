@@ -149,7 +149,7 @@ const EducationSection = () => {
                 lg:min-w-[140px]
               "
             >
-              October 2022 — May 2026
+              October 2022 — April 2026
             </div>
 
           </div>
