@@ -1,20 +1,26 @@
-import { publicUrl } from "@/lib/utils";
 
 const TechStackSection = () => {
-  const technologies = [
-    { name: "C", icon: publicUrl("images/c-icon.png") },
-    { name: "C++", icon: publicUrl("images/cpp-icon.png") },
-    { name: "Java", icon: publicUrl("images/java-icon.png") },
-    { name: "Python", icon: publicUrl("images/python-icon.png") },
-    { name: "ReactJS", icon: publicUrl("images/react-icon.png") },
-    { name: "NodeJS", icon: publicUrl("images/node-icon.png") },
-    { name: "MongoDB", icon: publicUrl("images/mongo-icon.png") },
-    { name: "HTML5", icon: publicUrl("images/html-icon.png") },
-    { name: "CSS3", icon: publicUrl("images/css-icon.png") },
-    { name: "Git", icon: publicUrl("images/git-icon.png") },
-    { name: "GitHub", icon: publicUrl("images/github-icon.png") },
-    { name: "JavaScript", icon: publicUrl("images/js-icon.png") },
-    { name: "REST API", icon: publicUrl("images/api-icon.png") },
+  const techGroups = [
+    {
+      title: "Languages",
+      items: ["Java", "Python", "C++", "JavaScript"],
+    },
+    {
+      title: "Backend",
+      items: ["Spring Boot", "FastAPI", "Node.js", "REST APIs", "Microservices"],
+    },
+    {
+      title: "Database",
+      items: ["MySQL", "MongoDB", "Redis"],
+    },
+    {
+      title: "Cloud",
+      items: ["AWS", "Lambda", "S3", "EC2", "IAM", "CloudWatch", "Textract", "DynamoDB"],
+    },
+    {
+      title: "Tools",
+      items: ["Docker", "Git", "GitHub", "Linux", "Postman", "VS Code", "IntelliJ"],
+    },
   ];
 
   return (
@@ -87,130 +93,72 @@ const TechStackSection = () => {
           </h2>
         </div>
 
-        {/* GRID */}
-        <div
-          className="
-            grid
-
-            grid-cols-2
-            sm:grid-cols-3
-            md:grid-cols-4
-            lg:grid-cols-5
-
-            gap-4
-            sm:gap-5
-          "
-        >
-          {technologies.map((tech, index) => (
+        {/* GROUPED SKILLS */}
+        <div className="grid gap-4 md:gap-5">
+          {techGroups.map((group) => (
             <div
-              key={index}
+              key={group.title}
               className="
                 group
 
                 relative
 
-                rounded-2xl
+                overflow-hidden
+                rounded-3xl
 
                 border border-white/[0.06]
-
                 bg-[#0b1120]/70
-
                 backdrop-blur-xl
 
-                p-5
-
-                overflow-hidden
+                p-5 sm:p-6
 
                 transition-all
                 duration-300
 
                 hover:-translate-y-1
                 hover:border-primary/20
+                hover:shadow-[0_0_30px_rgba(255,122,24,0.08)]
               "
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              {/* INNER LIGHT */}
-              <div
-                className="
-                  absolute
-                  inset-0
+              <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+                <div className="shrink-0 sm:w-40">
+                  <p className="text-xs uppercase tracking-[0.28em] text-primary/80">
+                    {group.title}
+                  </p>
 
-                  opacity-0
-                  group-hover:opacity-100
-
-                  transition-opacity
-                  duration-300
-
-                  bg-gradient-to-br
-                  from-primary/[0.04]
-                  to-transparent
-                "
-              />
-
-              {/* CONTENT */}
-              <div
-                className="
-                  relative
-                  z-10
-
-                  flex
-                  flex-col
-                  items-center
-                  justify-center
-
-                  text-center
-                "
-              >
-
-                {/* ICON */}
-                <div
-                  className="
-                    w-16
-                    h-16
-
-                    rounded-xl
-
-                    bg-white/[0.03]
-
-                    border border-white/[0.05]
-
-                    flex
-                    items-center
-                    justify-center
-
-                    transition-all
-                    duration-300
-
-                    group-hover:border-primary/20
-                  "
-                >
-                  <img
-                    src={tech.icon}
-                    alt={tech.name}
-                    className="
-                      w-9
-                      h-9
-
-                      object-contain
-                    "
-                  />
+                  <p className="mt-3 text-sm leading-6 text-zinc-400">
+                    Core tools and technologies I use regularly in projects and internships.
+                  </p>
                 </div>
 
-                {/* NAME */}
-                <h3
-                  className="
-                    mt-4
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="
+                        rounded-full
+                        border border-white/10
+                        bg-white/[0.04]
 
-                    text-white
+                        px-4 py-2
 
-                    text-[13px]
-                    sm:text-[14px]
+                        text-sm
+                        font-medium
+                        text-white
 
-                    font-medium
-                  "
-                >
-                  {tech.name}
-                </h3>
+                        transition-colors
+                        duration-300
+
+                        group-hover:border-primary/20
+                        group-hover:text-primary
+                      "
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
