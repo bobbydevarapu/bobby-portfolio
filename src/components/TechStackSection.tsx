@@ -1,9 +1,17 @@
 
+import { publicUrl } from "@/lib/utils";
+
 const TechStackSection = () => {
   const techGroups = [
     {
       title: "Languages",
-      items: ["Java", "Python", "C++", "JavaScript"],
+      items: [
+        { name: "Java", icon: publicUrl("images/java-icon.png") },
+        { name: "Python", icon: publicUrl("images/python-icon.png") },
+        { name: "C++", icon: publicUrl("images/cpp-icon.png") },
+        { name: "JavaScript", icon: publicUrl("images/js-icon.png") },
+      ],
+      variant: "icons",
     },
     {
       title: "Backend",
@@ -122,43 +130,78 @@ const TechStackSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+              <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <div className="shrink-0 sm:w-40">
                   <p className="text-xs uppercase tracking-[0.28em] text-primary/80">
                     {group.title}
                   </p>
-
-                  <p className="mt-3 text-sm leading-6 text-zinc-400">
-                    Core tools and technologies I use regularly in projects and internships.
-                  </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="
-                        rounded-full
-                        border border-white/10
-                        bg-white/[0.04]
+                {group.variant === "icons" ? (
+                  <div className="flex flex-wrap gap-3 sm:gap-4">
+                    {group.items.map((item) => (
+                      <div
+                        key={item.name}
+                        className="
+                          flex
+                          flex-col
+                          items-center
+                          gap-2
 
-                        px-4 py-2
+                          rounded-2xl
+                          border border-white/10
+                          bg-white/[0.04]
 
-                        text-sm
-                        font-medium
-                        text-white
+                          px-4 py-3
 
-                        transition-colors
-                        duration-300
+                          transition-colors
+                          duration-300
 
-                        group-hover:border-primary/20
-                        group-hover:text-primary
-                      "
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
+                          group-hover:border-primary/20
+                        "
+                      >
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                          <img
+                            src={item.icon}
+                            alt={item.name}
+                            className="h-7 w-7 object-contain"
+                          />
+                        </div>
+
+                        <span className="text-sm font-medium text-white">
+                          {item.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <span
+                        key={item}
+                        className="
+                          rounded-full
+                          border border-white/10
+                          bg-white/[0.04]
+
+                          px-4 py-2
+
+                          text-sm
+                          font-medium
+                          text-white
+
+                          transition-colors
+                          duration-300
+
+                          group-hover:border-primary/20
+                          group-hover:text-primary
+                        "
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
