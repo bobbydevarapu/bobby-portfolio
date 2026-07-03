@@ -11,23 +11,46 @@ const TechStackSection = () => {
         { name: "C++", icon: publicUrl("images/cpp-icon.png") },
         { name: "JavaScript", icon: publicUrl("images/js-icon.png") },
       ],
-      variant: "icons",
     },
     {
       title: "Backend",
-      items: ["Spring Boot", "FastAPI", "Node.js", "REST APIs", "Microservices"],
+      items: [
+        { name: "Spring Boot", icon: publicUrl("images/springboot.png") },
+        { name: "Node.js", icon: publicUrl("images/nodejs.png") },
+        { name: "REST APIs", icon: publicUrl("images/rest-api-icon.png") },
+        { name: "Microservices", icon: publicUrl("images/micorservices.png") },
+      ],
     },
     {
       title: "Database",
-      items: ["MySQL", "MongoDB", "Redis"],
+      items: [
+        { name: "MySQL", icon: publicUrl("images/mysql.png") },
+        { name: "MongoDB", icon: publicUrl("images/mongodb-icon.png") },
+      ],
     },
     {
       title: "Cloud",
-      items: ["AWS", "Lambda", "S3", "EC2", "IAM", "CloudWatch", "Textract", "DynamoDB"],
+      items: [
+        { name: "AWS", icon: publicUrl("images/aws.png") },
+        { name: "Lambda", icon: publicUrl("images/lambda.png") },
+        { name: "S3", icon: publicUrl("images/s3.png") },
+        { name: "EC2", icon: publicUrl("images/ec2.png") },
+        { name: "IAM", icon: publicUrl("images/IAM.png") },
+        { name: "CloudWatch", icon: publicUrl("images/cloudwatch.png") },
+        { name: "Textract", icon: publicUrl("images/textract.png") },
+        { name: "DynamoDB", icon: publicUrl("images/dynamodb.png") },
+      ],
     },
     {
       title: "Tools",
-      items: ["Docker", "Git", "GitHub", "Linux", "Postman", "VS Code", "IntelliJ"],
+      items: [
+        { name: "Docker", icon: publicUrl("images/docker.png") },
+        { name: "Git", icon: publicUrl("images/git-icon.png") },
+        { name: "GitHub", icon: publicUrl("images/github-icon.png") },
+        { name: "Linux" },
+        { name: "VS Code", icon: publicUrl("images/vscode.png") },
+        { name: "IntelliJ", icon: publicUrl("images/intelliJ.png") },
+      ],
     },
   ];
 
@@ -137,15 +160,16 @@ const TechStackSection = () => {
                   </p>
                 </div>
 
-                {group.variant === "icons" ? (
-                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-4">
-                    {group.items.map((item) => (
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+                  {group.items.map((item) => (
+                    item.icon ? (
                       <div
                         key={item.name}
                         className="
                           flex
                           flex-col
                           items-center
+                          justify-center
                           gap-2
 
                           rounded-2xl
@@ -154,10 +178,13 @@ const TechStackSection = () => {
 
                           px-4 py-4
 
-                          transition-colors
+                          text-center
+
+                          transition-all
                           duration-300
 
                           group-hover:border-primary/20
+                          group-hover:bg-white/[0.06]
                         "
                       >
                         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.03] border border-white/[0.05]">
@@ -172,36 +199,36 @@ const TechStackSection = () => {
                           {item.name}
                         </span>
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <span
-                        key={item}
+                    ) : (
+                      <div
+                        key={item.name}
                         className="
-                          rounded-full
+                          flex
+                          items-center
+                          justify-center
+
+                          rounded-2xl
                           border border-white/10
                           bg-white/[0.04]
 
-                          px-4 py-2
+                          px-4 py-4
 
                           text-sm
                           font-medium
                           text-white
 
-                          transition-colors
+                          transition-all
                           duration-300
 
                           group-hover:border-primary/20
-                          group-hover:text-primary
+                          group-hover:bg-white/[0.06]
                         "
                       >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                        {item.name}
+                      </div>
+                    )
+                  ))}
+                </div>
               </div>
             </div>
           ))}
