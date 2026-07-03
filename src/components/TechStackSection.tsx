@@ -118,7 +118,7 @@ const TechStackSection = () => {
                 bg-[#0b1120]/70
                 backdrop-blur-xl
 
-                p-5 sm:p-6
+                p-5 sm:p-6 md:p-7
 
                 transition-all
                 duration-300
@@ -130,15 +130,15 @@ const TechStackSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-                <div className="shrink-0 sm:w-40">
-                  <p className="text-xs uppercase tracking-[0.28em] text-primary/80">
+              <div className="relative z-10 grid gap-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8">
+                <div className="shrink-0">
+                  <p className="text-xs uppercase tracking-[0.32em] text-primary/80">
                     {group.title}
                   </p>
                 </div>
 
                 {group.variant === "icons" ? (
-                  <div className="flex flex-wrap gap-3 sm:gap-4">
+                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-4">
                     {group.items.map((item) => (
                       <div
                         key={item.name}
@@ -152,7 +152,7 @@ const TechStackSection = () => {
                           border border-white/10
                           bg-white/[0.04]
 
-                          px-4 py-3
+                          px-4 py-4
 
                           transition-colors
                           duration-300
