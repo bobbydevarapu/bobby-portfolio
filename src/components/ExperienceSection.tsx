@@ -140,10 +140,9 @@ const ExperienceSection = () => {
                   md:flex-row
                   md:items-start
 
-                  ${
-                    index % 2 === 0
-                      ? "md:justify-start"
-                      : "md:justify-end"
+                  ${index % 2 === 0
+                    ? "md:justify-start"
+                    : "md:justify-end"
                   }
                 `}
               >
