@@ -28,7 +28,7 @@ const ExperienceSection = () => {
       location: "Surampalem, Andhra Pradesh",
       technologies: [
         "AWS",
-        "Python",
+        "CCNA",
         "Bash",
         "Linux",
       ],
