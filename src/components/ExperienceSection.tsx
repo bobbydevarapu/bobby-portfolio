@@ -7,6 +7,12 @@ const ExperienceSection = () => {
       title: "Generative AI Intern",
       company: "SmartBridge Educational Services Pvt. Ltd",
       location: "Remote, Andhra Pradesh",
+      technologies: [
+        "Python",
+        "IBM Cloud",
+        "Machine Learning",
+        "Data Validation",
+      ],
       points: [
         "Built Python-based data pipelines on IBM Cloud to process and analyze 50K+ records efficiently.",
         "Improved baseline model performance by 18% through structured dataset validation and preprocessing.",
@@ -20,6 +26,12 @@ const ExperienceSection = () => {
       title: "AWS Development Intern",
       company: "Technical Hub Pvt Ltd",
       location: "Surampalem, Andhra Pradesh",
+      technologies: [
+        "AWS",
+        "Python",
+        "Bash",
+        "Linux",
+      ],
       points: [
         "Managed AWS infrastructure (EC2, S3, IAM, CloudWatch) supporting 5+ applications in test environments.",
         "Automated environment setup using Python and Bash scripts on Linux, cutting manual effort by 25%.",
@@ -323,6 +335,35 @@ const ExperienceSection = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* TECHNOLOGIES */}
+                    <div className="mt-7">
+                      <p className="text-xs uppercase tracking-[0.28em] text-zinc-500">
+                        Technologies
+                      </p>
+
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {exp.technologies.map((technology) => (
+                          <span
+                            key={technology}
+                            className="
+                              rounded-full
+                              border border-primary/20
+
+                              bg-primary/10
+
+                              px-3 py-1
+
+                              text-[12px]
+                              font-medium
+                              text-primary
+                            "
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
                     {/* FOOTER */}
                     <div className="mt-8">
