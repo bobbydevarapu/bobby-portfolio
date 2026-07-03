@@ -47,7 +47,7 @@ const TechStackSection = () => {
         { name: "Docker", icon: publicUrl("images/docker.png") },
         { name: "Git", icon: publicUrl("images/git-icon.png") },
         { name: "GitHub", icon: publicUrl("images/github-icon.png") },
-        { name: "Linux" },
+        { name: "Linux", icon: publicUrl("images/linux-icon.png") },
         { name: "VS Code", icon: publicUrl("images/vscode.png") },
         { name: "IntelliJ", icon: publicUrl("images/intelliJ.png") },
       ],
