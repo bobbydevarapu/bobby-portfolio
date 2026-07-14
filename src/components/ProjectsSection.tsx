@@ -30,7 +30,7 @@ const ProjectsSection = () => {
         "https://github.com/bobbydevarapu/Analyzer-101",
 
       demoLink:
-        "https://aia-101.up.railway.app/",
+        "https://analyzer-101.vercel.app/",
 
       image: publicUrl("image/aia.png"),
     },
